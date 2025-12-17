@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love & Relationship Quotes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f6f6f9;
+            color: #333;
+        }
+        /* Navbar */
+        nav {
+            background: #020101;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a.active {
+            border-bottom: 2px solid white;
+        }
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #ff6b81;
+        }
+        /* Tabs */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .tab.active {
+            background: #ff6b81;
+            color: white;
+        }
+        /* Quotes grid */
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .quote-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.2s;
+        }
+        .quote-card:hover {
+            transform: translateY(-5px);
+        }
+        .quote-text {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff6b81;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            background: #000000;
+            color: rgb(225, 225, 225);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo"><a href="index.html" class="active">LoveTools</a></div>
+    <div class="nav-links">
+        <a href="love-meter.html">Love Meter</a>
+        <a href="miss-you.html">Miss You</a>
+        <a href="apology.html">Apology</a>
+        <a href="birthday.html">Birthday</a>
+        <a href="advice.html">Advice</a>
+        <a href="quotes.html">Quotes</a>
+    </div>
+</nav>
+
+<header>
+    <h1>Love & Relationship Quotes</h1>
+</header>
+
+<div class="container">
+    <div class="tabs">
+        <div class="tab active" onclick="showQuotes('english')">English</div>
+        <div class="tab" onclick="showQuotes('hindi')">Hindi</div>
+        <div class="tab" onclick="showQuotes('marathi')">Marathi</div>
+    </div>
+
+    <div id="quotesContainer" class="quotes-grid"></div>
+</div>
+
+<footer>
+    &copy; 2025 Love & Relationship. All rights reserved.
+</footer>
+
+<script>
+    const quotes = {
+        english: [
+            "Love is composed of a single soul inhabiting two bodies.",
+            "The best thing to hold onto in life is each other.",
+            "Where there is love there is life.",
+            "You yourself, as much as anybody in the entire universe, deserve your love and affection.",
+            "Love recognizes no barriers.",
+            "Love all, trust a few, do wrong to none.",
+            "To love and be loved is to feel the sun from both sides.",
+            "Love is when the other person's happiness is more important than your own.",
+            "We accept the love we think we deserve.",
+            "Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day.",
+            "Love is the only reality, and it is not a mere sentiment. It is the ultimate truth that lies at the heart of creation.",
+            "Where there is love there is always life.",
+            "Love does not dominate; it cultivates.",
+            "The giving of love is an education in itself.",
+            "Love is the bridge between you and everything.",
+            "Love is a friendship set to music.",
+            "Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.",
+            "Love is a canvas furnished by nature and embroidered by imagination.",
+            "The best proof of love is trust.",
+            "Love is the flower you've got to let grow."
+            // Add more if needed
+        ],
+        hindi: [
+            "प्यार वह है जो किसी को आपके बिना नहीं रहना चाहिए।",
+            "सच्चा प्यार अंधा होता है।",
+            "प्यार में समझौता नहीं होता।",
+            "जहां प्यार होता है वहां जीवन होता है।",
+            "प्यार केवल महसूस करने का नाम है।",
+            "प्यार बिना शर्त के होना चाहिए।",
+            "सच्चा प्यार कभी समाप्त नहीं होता।",
+            "प्यार सबसे बड़ी ताकत है।",
+            "प्यार में विश्वास सबसे जरूरी है।",
+            "जो प्यार करता है वह कभी हार नहीं मानता।",
+            "प्यार वह नहीं जो दुनिया को दिखाया जाए, बल्कि जो दिल से महसूस किया जाए।",
+            "सच्चा प्यार शब्दों से नहीं बल्कि कर्मों से पता चलता है।",
+            "प्यार वह चिरस्थायी भावना है जो हर बाधा पार कर सकती है।",
+            "प्यार में दिल की सुनो और दिमाग की नहीं।",
+            "प्यार वह है जो आत्मा को जोड़ता है।"
+            // Add more if needed
+        ],
+        marathi: [
+            "प्रेम म्हणजे दोन जीवांचा संगम.",
+            "सत्य प्रेम कधीही संपत नाही.",
+            "प्रेमात समजूतदारपणा असणे आवश्यक आहे.",
+            "जिथे प्रेम आहे तिथे जीवन आहे.",
+            "प्रेम म्हणजे एकमेकांच्या आनंदासाठी असलेले सहानुभूती.",
+            "खरे प्रेम हे निस्वार्थी असते.",
+            "प्रेम हृदयातून होते, शब्दांपासून नाही.",
+            "ज्याचे प्रेम खरे आहे, त्याचे वेळा कधीच संपत नाही.",
+            "प्रेमात विश्वास हीच खरी ताकद आहे.",
+            "प्रेमाने आयुष्य सुंदर बनते.",
+            "प्रेम हे फक्त भावना नाही, तर क्रियाही आहे.",
+            "प्रेमाने जीवनाला अर्थ मिळतो.",
+            "प्रेमात आनंद वाटणे महत्त्वाचे आहे.",
+            "प्रेम आपल्याला सर्व काही शिकवते.",
+            "सत्य प्रेम हे नेहमी एकसंध असते."
+            // Add more if needed
+        ]
+    };
+
+    const quotesContainer = document.getElementById('quotesContainer');
+
+    function showQuotes(lang) {
+        quotesContainer.innerHTML = '';
+        quotes[lang].forEach(q => {
+            const card = document.createElement('div');
+            card.className = 'quote-card';
+            card.innerHTML = `
+                <p class="quote-text">${q}</p>
+                <button class="copy-btn" onclick="copyQuote('${q.replace(/'/g,"\\'")}')"><i class="bi bi-clipboard"></i> Copy</button>
+            `;
+            quotesContainer.appendChild(card);
+        });
+
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelector(`.tab[onclick="showQuotes('${lang}')"]`).classList.add('active');
+    }
+
+    function copyQuote(text) {
+        navigator.clipboard.writeText(text);
+        alert('Quote copied!');
+    }
+
+    // Show English quotes by default
+    showQuotes('english');
+</script>
+
+</body>
+</html>

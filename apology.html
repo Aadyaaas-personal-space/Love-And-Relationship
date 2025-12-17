@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apology Message Generator – Say Sorry in Style</title>
+
+<meta name="description" content="Generate heartfelt, romantic, emotional, and funny apology messages instantly. Perfect way to say sorry to your loved ones." />
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background: linear-gradient(135deg, #f8f9fb, #eef1ff);
+    font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+/* CARD */
+msg-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+}
+
+/* MESSAGE BOX */
+.message-box {
+    background: #f8f9fb;
+    border-radius: 18px;
+    padding: 25px;
+    min-height: 120px;
+    font-size: 18px;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* BUTTONS */
+.action-btn {
+    border-radius: 50px;
+    padding: 10px 22px;
+    font-weight: 500;
+}
+
+/* ICON ONLY BUTTONS */
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Social Colors */
+.btn-success { background-color: #25D366; color: #fff; }
+.btn-primary { background-color: #3b5998; color: #fff; }
+.btn-info { background-color: #1DA1F2; color: #fff; }
+.btn-danger { background-color: #C13584; color: #fff; }
+
+/* FOOTER */
+footer {
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 20px 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">LoveTools</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="love-meter.html">Love Meter</a></li>
+            <li class="nav-item"><a class="nav-link" href="miss-you.html">Miss You</a></li>
+            <li class="nav-item"><a class="nav-link active" href="apology.html">Apology</a></li>
+            <li class="nav-item"><a class="nav-link" href="birthday.html">Birthday</a></li>
+            <li class="nav-item"><a class="nav-link" href="advice.html">Advice</a></li>
+            <li class="nav-item"><a class="nav-link" href="quotes.html">Quotes</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<!-- MAIN -->
+<div class="container min-vh-100 d-flex align-items-center justify-content-center mt-5 pt-5">
+<div class="col-md-8">
+
+<div class="msg-card text-center">
+<h2 class="fw-bold mb-3">🙏 Apology Message Generator</h2>
+<p class="text-muted mb-4">Find the perfect words to say sorry ❤️</p>
+
+<!-- CATEGORY -->
+<div class="mb-4">
+    <button class="btn btn-outline-primary action-btn me-2" onclick="generate('romantic')">Romantic</button>
+    <button class="btn btn-outline-primary action-btn me-2" onclick="generate('emotional')">Emotional</button>
+    <button class="btn btn-outline-primary action-btn me-2" onclick="generate('funny')">Funny</button>
+    <button class="btn btn-outline-primary action-btn" onclick="generate('heartfelt')">Heartfelt</button>
+</div>
+
+<!-- MESSAGE -->
+<div id="output" class="message-box mb-4">
+    Click a category to generate a message 💖
+</div>
+
+<!-- ACTIONS -->
+<div class="d-flex justify-content-center gap-3">
+    <button class="btn btn-primary action-btn" onclick="copyText()">Copy Message</button>
+    <button class="btn btn-outline-secondary action-btn" onclick="generate(lastType)">Generate Again</button>
+</div>
+
+<!-- SOCIAL SHARE ICON BUTTONS -->
+<div class="d-flex justify-content-center gap-2">
+    <button class="btn btn-success btn-icon" onclick="shareWhatsApp()" title="Share on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </button>
+    <button class="btn btn-primary btn-icon" onclick="shareFacebook()" title="Share on Facebook">
+        <i class="bi bi-facebook"></i>
+    </button>
+    <button class="btn btn-info btn-icon" onclick="shareTwitter()" title="Share on Twitter">
+        <i class="bi bi-twitter"></i>
+    </button>
+    <button class="btn btn-danger btn-icon" onclick="shareInstagram()" title="Share on Instagram">
+        <i class="bi bi-instagram"></i>
+    </button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="container text-center">
+    <p class="mb-1">© 2025 LoveTools. All Rights Reserved.</p>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms & Conditions</a>
+</div>
+</footer>
+
+<script>
+let lastType = "romantic";
+
+const messages = {
+    romantic: [
+        "I’m deeply sorry, my love. I never meant to hurt you.",
+        "Please forgive me, I promise to make it right.",
+        "I miss us and I regret my mistakes.",
+        "My heart aches for your forgiveness.",
+        "I’m sorry for the words I said. They weren’t true.",
+        "I feel lost without your smile. Please forgive me.",
+        "I never want to see you upset. I’m sorry.",
+        "I regret hurting the one I love most. Forgive me.",
+        "I am truly sorry and I want to make things better.",
+        "I wish I could take back my mistakes. I’m sorry.",
+        // add 40+ more messages to make 50+
+    ],
+    emotional: [
+        "I feel so bad for what I did. Please forgive me.",
+        "My heart is heavy with regret. I’m sorry.",
+        "I hate that I caused you pain. I apologize.",
+        "I never meant to hurt you emotionally. Please forgive me.",
+        "I feel miserable without your forgiveness.",
+        // add more to make 50+ messages
+    ],
+    funny: [
+        "Oops! My bad 😅 Please don’t be mad!",
+        "I promise I was only pretending to be wrong 😜 Forgive me!",
+        "I messed up, but at least I’m cute while apologizing!",
+        "I’m sorry! Can I bribe you with chocolates?",
+        "Forgive me before I do something even sillier 😆",
+        // add more to make 50+ messages
+    ],
+    heartfelt: [
+        "From the bottom of my heart, I am sorry.",
+        "I truly regret my actions and hope you forgive me.",
+        "Please accept my sincerest apologies, my love.",
+        "I can’t bear the thought of us apart. I’m sorry.",
+        "I promise to never make the same mistake again.",
+        // add more to make 50+ messages
+    ]
+};
+
+function generate(type) {
+    lastType = type;
+    let msg = messages[type][Math.floor(Math.random() * messages[type].length)];
+    document.getElementById("output").innerText = msg;
+}
+
+function copyText() {
+    navigator.clipboard.writeText(document.getElementById("output").innerText);
+    alert("Message copied ❤️");
+}
+
+function shareWhatsApp() {
+    const text = encodeURIComponent(document.getElementById("output").innerText);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
+}
+
+function shareFacebook() {
+    const text = encodeURIComponent(document.getElementById("output").innerText);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=&quote=${text}`, '_blank');
+}
+
+function shareTwitter() {
+    const text = encodeURIComponent(document.getElementById("output").innerText);
+    window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
+}
+
+function shareInstagram() {
+    alert("Instagram does not support direct text sharing. Please copy the message and paste it in Instagram.");
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

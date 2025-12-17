@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love & Relationship Tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            background: #eae9e9;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: rgb(0, 0, 0);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Sections */
+        .hero {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 22px;
+        }
+        .hero1 { background: url('https://cdn.powerofpositivity.com/wp-content/uploads/2016/09/saying-I-love-you-changes.jpg') no-repeat center center/cover; }
+        .hero2 { background: url('https://media.post.rvohealth.io/wp-content/uploads/sites/4/2022/01/couple-silhouette-sunset-holding-hands-walking-grass-1296x728-header-1024x575.jpg') no-repeat center center/cover; }
+        .hero3 { background: url('https://www.willistonian.org/wp-content/uploads/2024/12/lovelanguages.jpg') no-repeat center center/cover; }
+
+        /* Popular Tools Section */
+        .tools {
+            padding: 60px 20px;
+            text-align: center;
+            background: #ffffff;
+        }
+        .tools h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .tool-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .tool-card {
+            background: white;
+            padding: 20px;
+            width: 220px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .tool-card:hover {
+            transform: translateY(-10px);
+        }
+        .tool-card h3 {
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        .tool-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: #000000;
+            color: rgb(255, 255, 255);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 40px; }
+            .hero p { font-size: 18px; }
+            .tool-cards { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Love Tools</div>
+        <ul>
+            <li><a href="love-meter.html">Love Meter</a></li>
+            <li><a href="miss-you.html">Miss You</a></li>
+            <li><a href="apology.html">Apology</a></li>
+            <li><a href="birthday.html">Birthday</a></li>
+            <li><a href="advice.html">Advice</a></li>
+            <li><a href="quotes.html">Quotes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Sections -->
+    <section class="hero hero1">
+        <div>
+            <h1>Discover Your Love</h1>
+            <p>Explore our love calculators, meters, and more!</p>
+        </div>
+    </section>
+
+    <section class="hero hero2">
+        <div>
+            <h1>Send Romantic Messages</h1>
+            <p>Generate cute, emotional messages for your loved one instantly.</p>
+        </div>
+    </section>
+
+    <section class="hero hero3">
+        <div>
+            <h1>Relationship Advice</h1>
+            <p>Get tips, birthday wishes, apology messages & strengthen your bond.</p>
+        </div>
+    </section>
+
+    <!-- Popular Tools Section -->
+    <section class="tools">
+        <h2>Our Popular Tools</h2>
+        <div class="tool-cards">
+            <div class="tool-card">
+                <h3>Love Meter</h3>
+                <p>Check the love compatibility between you and your partner.</p>
+            </div>
+            <div class="tool-card">
+                <h3>Miss You Message Generator</h3>
+                <p>Send sweet messages to express your emotions instantly.</p>
+            </div>
+            <div class="tool-card">
+                <h3>Apology Messages</h3>
+                <p>Craft heartfelt apologies to mend relationships.</p>
+            </div>
+            <div class="tool-card">
+                <h3>Birthday Wishes</h3>
+                <p>Create unique birthday wishes for your loved ones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Love Tools. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
