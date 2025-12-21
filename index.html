@@ -5,7 +5,7 @@
     <meta name="description" content="Lovetool.in offers free love calculator, love compatibility tests, relationship tools and fun love games for couples." />
     <title>Love Tool – Love Calculator, Compatibility & Relationship Tools</title>
 
-    <!-- Google Font -->
+    <!-- Google Font (Adjusted weights only) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Google AdSense -->
@@ -13,7 +13,7 @@
         crossorigin="anonymous"></script>
 
     <style>
-        /* Reset & General Styles */
+        /* Reset & Global Font */
         * {
             margin: 0;
             padding: 0;
@@ -21,7 +21,7 @@
             font-family: 'Poppins', sans-serif;
         }
         body {
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
             font-weight: 400;
         }
@@ -30,11 +30,11 @@
             color: inherit;
         }
 
-        /* Navbar */
+        /* Navbar (Adjusted only) */
         nav {
             width: 100%;
             background: #eae9e9;
-            padding: 15px 30px;
+            padding: 14px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -43,22 +43,25 @@
             z-index: 1000;
         }
         nav .logo {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
+            letter-spacing: 0.5px;
             color: #000;
         }
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 24px;
+            align-items: center;
         }
         nav ul li a {
-            color: #000;
+            font-size: 15px;
             font-weight: 500;
-            transition: 0.3s;
+            color: #000;
+            transition: 0.25s ease;
         }
         nav ul li a:hover {
-            text-decoration: underline;
+            opacity: 0.7;
         }
 
         /* Hero Sections */
@@ -76,9 +79,10 @@
             font-size: 58px;
             margin-bottom: 20px;
             font-weight: 700;
+            letter-spacing: -0.5px;
         }
         .hero p {
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 400;
             max-width: 900px;
             margin: auto;
@@ -106,7 +110,7 @@
         }
         .tool-card {
             background: white;
-            padding: 20px;
+            padding: 22px;
             width: 220px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -119,6 +123,7 @@
             margin-bottom: 10px;
             color: #000;
             font-weight: 600;
+            font-size: 17px;
         }
         .tool-card p {
             font-size: 14px;
@@ -133,16 +138,31 @@
             padding: 30px 20px;
             text-align: center;
             font-size: 14px;
+            font-weight: 400;
         }
         footer a {
-            margin: 0 5px;
+            margin: 0 6px;
+            font-weight: 500;
         }
 
         /* Responsive */
         @media(max-width: 768px) {
-            .hero h1 { font-size: 38px; }
-            .hero p { font-size: 17px; }
-            .tool-cards { flex-direction: column; align-items: center; }
+            nav {
+                padding: 12px 20px;
+            }
+            nav ul {
+                gap: 16px;
+            }
+            .hero h1 {
+                font-size: 38px;
+            }
+            .hero p {
+                font-size: 17px;
+            }
+            .tool-cards {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
