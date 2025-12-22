@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zodiac Love Match – LoveTools</title>
+<meta name="description" content="Check your zodiac compatibility with your partner. Fun, romantic, and instant results.">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body {
+    background: linear-gradient(135deg, #fff5e6, #f0faff);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+/* Main Box */
+.zodiac-box {
+    max-width: 520px;
+    background: #fff;
+    margin: 140px auto 80px;
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.zodiac-box h1 {
+    color: #ff4d6d;
+    font-weight: 700;
+}
+.zodiac-box p {
+    color: #555;
+}
+
+/* Selects */
+.form-select {
+    border-radius: 30px;
+    padding: 12px 18px;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.btn-zodiac {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: #ff4d6d;
+    color: #fff;
+    font-weight: 600;
+}
+.btn-zodiac:hover {
+    background: #e63b5f;
+}
+
+/* Result */
+.result {
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+.emoji {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+footer {
+            background: #ffffff;
+            color: #000000;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #000000;
+            text-decoration: none;
+        }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">LoveTools</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="love-meter.html">Love Meter</a></li>
+            <li class="nav-item"><a class="nav-link" href="miss-you.html">Miss You</a></li>
+            <li class="nav-item"><a class="nav-link" href="apology.html">Apology</a></li>
+            <li class="nav-item"><a class="nav-link" href="birthday.html">Birthday</a></li>
+            <li class="nav-item"><a class="nav-link" href="advice.html">Advice</a></li>
+            <li class="nav-item"><a class="nav-link" href="quotes.html">Quotes</a></li>
+            <li class="nav-item"><a class="nav-link" href="more.html">More</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<div class="zodiac-box">
+    <div class="emoji">⭐</div>
+    <h1>Zodiac Love Match</h1>
+    <p>Select your signs to check your love compatibility</p>
+
+    <select id="yourSign" class="form-select">
+        <option value="" disabled selected>Your Zodiac Sign</option>
+        <option value="Aries">Aries ♈</option>
+        <option value="Taurus">Taurus ♉</option>
+        <option value="Gemini">Gemini ♊</option>
+        <option value="Cancer">Cancer ♋</option>
+        <option value="Leo">Leo ♌</option>
+        <option value="Virgo">Virgo ♍</option>
+        <option value="Libra">Libra ♎</option>
+        <option value="Scorpio">Scorpio ♏</option>
+        <option value="Sagittarius">Sagittarius ♐</option>
+        <option value="Capricorn">Capricorn ♑</option>
+        <option value="Aquarius">Aquarius ♒</option>
+        <option value="Pisces">Pisces ♓</option>
+    </select>
+
+    <select id="partnerSign" class="form-select">
+        <option value="" disabled selected>Partner Zodiac Sign</option>
+        <option value="Aries">Aries ♈</option>
+        <option value="Taurus">Taurus ♉</option>
+        <option value="Gemini">Gemini ♊</option>
+        <option value="Cancer">Cancer ♋</option>
+        <option value="Leo">Leo ♌</option>
+        <option value="Virgo">Virgo ♍</option>
+        <option value="Libra">Libra ♎</option>
+        <option value="Scorpio">Scorpio ♏</option>
+        <option value="Sagittarius">Sagittarius ♐</option>
+        <option value="Capricorn">Capricorn ♑</option>
+        <option value="Aquarius">Aquarius ♒</option>
+        <option value="Pisces">Pisces ♓</option>
+    </select>
+
+    <button class="btn-zodiac" onclick="checkZodiac()">Check Compatibility</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="container text-center">
+    <p class="mb-1">© 2025 LoveTools. All Rights Reserved.</p>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms & Conditions</a>
+</div>
+</footer>
+
+<script>
+const bondLines = [
+    "A bond full of love and laughter 💖",
+    "Your stars are aligned for romance ✨",
+    "A sweet and caring connection awaits 💞",
+    "Perfect chemistry and endless joy 😍",
+    "Love and trust will guide your hearts 🌸"
+];
+
+function checkZodiac() {
+    const yourSign = document.getElementById("yourSign").value;
+    const partnerSign = document.getElementById("partnerSign").value;
+    const result = document.getElementById("result");
+
+    if(!yourSign || !partnerSign) {
+        result.innerHTML = "❗ Please select both zodiac signs";
+        return;
+    }
+
+    // Compatibility score: random 50-100%
+    const score = Math.floor(Math.random() * 51) + 50;
+    const bond = bondLines[Math.floor(Math.random() * bondLines.length)];
+
+    result.innerHTML = `
+        🌟 ${yourSign} ❤️ ${partnerSign}<br>
+        Compatibility Score: <span style="color:#ff4d6d;font-size:24px">${score}%</span><br><br>
+        ✨ Bond Line: <span style="color:#ff4d6d">${bond}</span>
+    `;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

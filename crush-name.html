@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crush Name Generator – LoveTools</title>
+<meta name="description" content="Generate your ideal crush name and discover your love bond instantly. Fun, free and romantic.">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body {
+    background: linear-gradient(135deg, #fff0f6, #f0faff);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+/* Main Box */
+.generator-box {
+    max-width: 520px;
+    background: #fff;
+    margin: 140px auto 80px;
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.generator-box h1 {
+    color: #ff4d6d;
+    font-weight: 700;
+}
+.generator-box p {
+    color: #555;
+}
+
+/* Inputs */
+.form-control, select, textarea {
+    border-radius: 30px;
+    padding: 12px 18px;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.btn-generate {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: #ff4d6d;
+    color: #fff;
+    font-weight: 600;
+}
+.btn-generate:hover {
+    background: #e63b5f;
+}
+
+/* Result */
+.result {
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+.emoji {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+footer {
+            background: #ffffff;
+            color: #000000;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #000000;
+            text-decoration: none;
+        }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">LoveTools</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="love-meter.html">Love Meter</a></li>
+            <li class="nav-item"><a class="nav-link" href="miss-you.html">Miss You</a></li>
+            <li class="nav-item"><a class="nav-link" href="apology.html">Apology</a></li>
+            <li class="nav-item"><a class="nav-link" href="birthday.html">Birthday</a></li>
+            <li class="nav-item"><a class="nav-link" href="advice.html">Advice</a></li>
+            <li class="nav-item"><a class="nav-link" href="quotes.html">Quotes</a></li>
+            <li class="nav-item"><a class="nav-link" href="more.html">More</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<div class="generator-box">
+    <div class="emoji">💘</div>
+    <h1>Crush Name Generator</h1>
+    <p>Enter your info and discover your ideal partner!</p>
+
+    <input type="text" id="yourName" class="form-control" placeholder="Your Name">
+
+    <select id="yourGender" class="form-control">
+        <option value="" disabled selected>Your Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+    <input type="text" id="desiredTraits" class="form-control" placeholder="Traits you want in your partner (cute, smart, kind...)">
+    <input type="text" id="cutenessLevel" class="form-control" placeholder="Preferred cuteness level (1-10)">
+    <input type="text" id="extraTraits" class="form-control" placeholder="Other preferences (funny, creative...)">
+
+    <button class="btn-generate" onclick="generateCrush()">Generate Crush</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="container text-center">
+    <p class="mb-1">© 2025 LoveTools. All Rights Reserved.</p>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms & Conditions</a>
+</div>
+</footer>
+
+<script>
+const maleNames = ["Aarav","Rohan","Vivaan","Aditya","Krishna","Shaurya","Aryan","Dev","Kabir","Ishaan"];
+const femaleNames = ["Aadhya","Saanvi","Ananya","Diya","Ishita","Kavya","Meera","Tara","Naina","Riya"];
+const bondLines = [
+    "You two are destined to make sparks fly! 🔥",
+    "A sweet and caring connection awaits 💞",
+    "Your bond will be full of laughter and joy 😍",
+    "Love and trust will guide your hearts 💖",
+    "A perfect match of fun and romance 🌸"
+];
+
+function generateCrush() {
+    const yourName = document.getElementById("yourName").value.trim();
+    const yourGender = document.getElementById("yourGender").value;
+    const traits = document.getElementById("desiredTraits").value.trim();
+    const cuteness = document.getElementById("cutenessLevel").value.trim();
+    const extra = document.getElementById("extraTraits").value.trim();
+    const result = document.getElementById("result");
+
+    if(!yourName || !yourGender) {
+        result.innerHTML = "❗ Please enter your name and gender";
+        return;
+    }
+
+    // Choose name of opposite gender
+    const crushName = yourGender === "male" 
+        ? femaleNames[Math.floor(Math.random() * femaleNames.length)] 
+        : maleNames[Math.floor(Math.random() * maleNames.length)];
+
+    // Random bond line
+    const bond = bondLines[Math.floor(Math.random() * bondLines.length)];
+
+    result.innerHTML = `
+        💖 Your ideal crush is: <span style="color:#ff4d6d;font-size:24px">${crushName}</span><br><br>
+        Traits you desired: ${traits || "Special & unique"}<br>
+        Cuteness Level: ${cuteness || "Perfectly adorable"}<br>
+        Extra preferences: ${extra || "All the love vibes"}<br><br>
+        ✨ Bond Line: <span style="color:#ff4d6d">${bond}</span>
+    `;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
