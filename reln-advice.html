@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Get practical, thoughtful, and heartfelt relationship advice. Tips for couples, dating, communication, trust, love, and building stronger bonds." />
+    <title>Relationship Advice – Love Tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f7f8fa;
+    color:#222;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    background:#ffffff;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:600;
+    text-decoration:none;
+    color:#222;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:28px;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-size:15px;
+    padding:6px 8px;
+    display:block;
+}
+
+nav ul li:hover > a{
+    color:#4fd1c5;
+}
+
+nav ul li ul{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    padding:10px 0;
+    min-width:180px;
+    z-index:9999;
+}
+
+nav ul li:hover ul{
+    display:block;
+}
+
+nav ul li ul li{
+    padding:0;
+}
+
+nav ul li ul li a{
+    padding:10px 15px;
+}
+
+nav ul li ul li a:hover{
+    background:#4fd1c5;
+    color:white;
+    border-radius:5px;
+}
+
+.hamburger{
+    display:none;
+    font-size:1.8em;
+    cursor:pointer;
+    color:#222;
+}
+
+@media(max-width:900px){
+    nav{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:15px 25px;
+    }
+    nav ul{
+        flex-direction:column;
+        width:100%;
+        display:none;
+    }
+    nav ul.show{
+        display:flex;
+    }
+    nav ul li{
+        margin-left:0;
+        width:100%;
+    }
+    nav ul li ul{
+        position:static;
+        display:block;
+        box-shadow:none;
+        padding:0;
+        background:#f7f8fa;
+        border-radius:0;
+    }
+    nav ul li ul li a:hover{
+        background:#4fd1c5;
+        color:white;
+        border-radius:0;
+    }
+    .hamburger{
+        display:block;
+    }
+}
+
+/* MAIN CONTENT */
+.main-content{
+    max-width:1100px;
+    margin:120px auto 60px;
+    padding:0 20px;
+}
+
+h1{
+    font-size:36px;
+    margin-bottom:20px;
+    color:#2d3748;
+}
+
+h2{
+    font-size:26px;
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#2d3748;
+}
+
+p{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:15px;
+    color:#333;
+}
+
+a{
+    color:#4fd1c5;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* ADVICE CARDS */
+.advice-card{
+    background:#ffffff;
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* INTERNAL LINK BUTTONS */
+.internal-links{
+    margin-top:30px;
+}
+
+.internal-links a{
+    display:inline-block;
+    background:#4fd1c5;
+    color:#fff;
+    padding:10px 20px;
+    margin:5px;
+    border-radius:25px;
+    font-weight:500;
+}
+
+.internal-links a:hover{
+    background:#3bb0a6;
+}
+
+/* FOOTER */
+footer{
+    padding:30px;
+    text-align:center;
+    background:#f1f1f1;
+    margin-top:50px;
+}
+
+footer a{
+    margin:0 15px;
+    text-decoration:none;
+    color:#333;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    h1{
+        font-size:28px;
+    }
+    h2{
+        font-size:22px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html" class="logo">LOVETOOLS</a>
+    <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
+    <ul id="navMenu">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="love-meter.html">Love Meter</a></li>
+        <li>
+            <a href="#">Message Generator &#9662;</a>
+            <ul>
+                <li><a href="miss-you.html">Miss You</a></li>
+                <li><a href="apology.html">Apology</a></li>
+                <li><a href="birthday.html">Birthday</a></li>
+                <li><a href="advice.html">Advice</a></li>
+            </ul>
+        </li>
+        <li><a href="quotes.html">Quotes</a></li>
+        <li><a href="more.html">More</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+    <h1>Relationship Advice for Couples</h1>
+    <p>Welcome to LoveTools’ relationship advice section. Here, we provide practical tips, insightful guidance, and heartfelt advice to help you strengthen your romantic relationships. Whether you are dating, engaged, or married, these tips can help you communicate better, build trust, and enjoy a stronger connection with your partner.</p>
+    
+    <div class="advice-card">
+        <h2>Effective Communication</h2>
+        <p>Good communication is the foundation of any healthy relationship. Be honest, open, and listen actively to your partner. Avoid misunderstandings by discussing feelings and expectations regularly.</p>
+    </div>
+    
+    <div class="advice-card">
+        <h2>Trust and Honesty</h2>
+        <p>Trust is earned and maintained through honesty and integrity. Avoid hiding feelings or secrets. Small acts of transparency create a secure and loving environment for both partners.</p>
+    </div>
+    
+    <div class="advice-card">
+        <h2>Quality Time Together</h2>
+        <p>Spend meaningful time with your partner. Engage in shared hobbies, plan date nights, or simply enjoy quiet moments together. These small efforts strengthen the bond and deepen emotional intimacy.</p>
+    </div>
+    
+    <div class="advice-card">
+        <h2>Managing Conflicts</h2>
+        <p>Disagreements are natural in any relationship. Handle conflicts with patience and empathy. Focus on resolving the issue rather than winning an argument, and respect each other's perspective.</p>
+    </div>
+    
+    <div class="advice-card">
+        <h2>Expressing Love and Appreciation</h2>
+        <p>Never underestimate the power of expressing love. Compliment your partner, acknowledge their efforts, and show gratitude. Small gestures and heartfelt words keep the relationship warm and vibrant.</p>
+    </div>
+
+    <div class="internal-links">
+        <a href="love-meter.html">Try Love Meter</a>
+        <a href="more.html">Explore Love Tools</a>
+        <a href="rom-msg.html">Generate Romantic Messages</a>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 LoveTool.in | All Rights Reserved</p>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('navMenu');
+        nav.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>
