@@ -2,189 +2,300 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Contact Us | LoveTools – Relationship Support</title>
+
+    <!-- SEO META -->
+    <meta name="description" content="Contact LoveTools for relationship support, feedback, business inquiries, or help with love tools. Trusted, user-friendly and transparent platform.">
+    <meta name="keywords" content="Contact LoveTools, relationship website contact, love advice help, relationship support">
+    <meta name="author" content="LoveTools">
+    <meta name="robots" content="index, follow">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Us – Love & Relationship Tools</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Contact Love & Relationship Tools for feedback, support, suggestions, or business inquiries." />
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FONTS & ICONS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
-            background: #fdfefe;
-            color: #333;
         }
 
-        /* NAVBAR */
-.navbar {
-    background: #fff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-}
-
-        .hero {
-            background: linear-gradient(135deg, #e8f8f5, #ffe3ec);
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-weight: 600;
-            font-size: 3rem;
-        }
-
-        .hero p {
-            max-width: 750px;
-            margin: 20px auto;
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .section {
-            padding: 80px 20px;
-        }
-
-        .card-custom {
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-
-        .highlight {
-            color: #ff5e8e;
-            font-weight: 600;
-        }
-
-        .form-control {
-            border-radius: 12px;
-            padding: 14px;
-        }
-
-        .btn-custom {
-            background: #ff5e8e;
-            border: none;
-            padding: 14px;
-            border-radius: 12px;
+        body {
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
             color: #fff;
-            font-weight: 500;
+            line-height: 1.7;
         }
 
-        .btn-custom:hover {
-            background: #ff3f79;
+        /* NAVBAR (same style as index) */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            z-index: 999;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ff7eb3;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #ff7eb3;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 120px 20px 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            max-width: 800px;
+            margin: auto;
+            color: #ddd;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .box {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-6px);
+            background: rgba(255,255,255,0.12);
+        }
+
+        .box i {
+            font-size: 30px;
+            color: #ff7eb3;
+            margin-bottom: 12px;
+        }
+
+        .box h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 14px;
+            color: #e6e6e6;
+        }
+
+        /* FORM */
+        .form-section {
+            margin-top: 70px;
+            background: rgba(255,255,255,0.08);
+            padding: 40px;
+            border-radius: 18px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        input, textarea {
+            padding: 14px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        textarea {
+            grid-column: 1 / -1;
+            height: 130px;
+            resize: none;
+        }
+
+        button {
+            grid-column: 1 / -1;
+            padding: 14px;
+            background: linear-gradient(90deg, #ff758c, #ff7eb3);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* SOCIAL */
+        .social {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .social a {
+            display: inline-block;
+            margin: 10px;
+            font-size: 22px;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            color: #ff7eb3;
+            transform: scale(1.2);
+        }
+
+        /* MAP */
+        .map {
+            margin-top: 70px;
+            border-radius: 15px;
+            overflow: hidden;
         }
 
         footer {
-            background: #111;
-            color: #ffffff;
-            padding: 40px 20px;
+            margin-top: 90px;
+            padding: 25px;
             text-align: center;
+            background: rgba(0,0,0,0.3);
+            font-size: 14px;
+            color: #ccc;
         }
 
         footer a {
-            color: #ff5e8e;
+            color: #ff7eb3;
             text-decoration: none;
         }
     </style>
 </head>
-
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top">
-<div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">LoveTools</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="love-meter.html">Love Meter</a></li>
-            <li class="nav-item"><a class="nav-link" href="miss-you.html">Miss You</a></li>
-            <li class="nav-item"><a class="nav-link" href="apology.html">Apology</a></li>
-            <li class="nav-item"><a class="nav-link" href="birthday.html">Birthday</a></li>
-            <li class="nav-item"><a class="nav-link" href="advice.html">Advice</a></li>
-            <li class="nav-item"><a class="nav-link" href="quotes.html">Quotes</a></li>
-            <li class="nav-item"><a class="nav-link" href="more.html">More</a></li>
-            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
-        </ul>
-    </div>
-</div>
-</nav>
-
-<!-- HERO SECTION -->
-<section class="hero">
-    <h1>Get in <span class="highlight">Touch</span></h1>
-    <p>
-        Have feedback, suggestions, or business inquiries?  
-        We’d love to hear from you.
-    </p>
-</section>
-
-
-<!-- CONTACT FORM -->
-<section class="section container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card card-custom p-5">
-                <h3 class="mb-4 text-center highlight">Contact Us</h3>
-
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label">Your Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your name" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Email Address</label>
-                        <input type="email" class="form-control" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control" rows="5" placeholder="Write your message..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-custom w-100">
-                        Send Message
-                    </button>
-                </form>
-            </div>
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">LoveTools</a>
+        <div class="nav-links">
+            <a href="about.html">About Us</a>
+            <a href="love-meter.html">Love Meter</a>
+            <a href="quotes.html">Articles</a>
+            <a href="more.html">More</a>
+            <a href="contact.html">Contact</a>
         </div>
     </div>
-</section>
+</nav>
 
+<div class="container">
 
-<!-- CONTACT INFO -->
-<section class="section" style="background:#f8f9fa;">
-    <div class="container text-center">
-        <h2 class="mb-4">We Usually Reply Fast 💬</h2>
-        <p class="mx-auto" style="max-width:800px;">
-            For support, feedback, or collaboration inquiries, feel free to reach out.
-            We value every message and aim to respond as quickly as possible.
+    <div class="section-title">
+        <h1>Contact LoveTools</h1>
+        <p>
+            We are always here to listen. Whether you have questions, feedback, or collaboration ideas,
+            feel free to reach out through any of the options below.
         </p>
     </div>
-</section>
 
+    <!-- CONTACT DETAILS -->
+    <div class="grid">
+        <div class="box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Our Addresses</h3>
+            <p>
+                📍 Borivali, Mumbai, Maharashtra, India<br>
+                📍 Mira-Bhayander, Thane, India<br>
+                📍 Pimpri-Chinchwad, Pune, India<br>
+                📍 Remote Team – Global
+            </p>
+        </div>
 
-<!-- FOOTER -->
+        <div class="box">
+            <i class="fas fa-phone"></i>
+            <h3>Phone Numbers</h3>
+            <p>
+                📞 +91 9011768643<br>
+                📞 +91 9156212232<br>
+                📞 +91 90000 11122
+            </p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Support</h3>
+            <p>
+                lovetools.in<br>
+                workside09@gmail.com
+            </p>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-section">
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Write your message..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="social">
+        <h2>Connect With Us</h2>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- MAP -->
+    <div class="map">
+        <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.4467467017207!2d72.86446597456057!3d19.30641119921935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b025e6ec39cb%3A0x8ab0fe7e930901d6!2sPravin%20Patil%20College%20of%20Diploma%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1766815934293!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+    </div>
+
+</div>
+
 <footer>
-<div class="container text-center">
-    <p class="mb-1">© 2025 LoveTools. All Rights Reserved.</p>
+    © 2025 <strong>LoveTools</strong> |
     <a href="privacy.html">Privacy Policy</a> |
     <a href="terms.html">Terms & Conditions</a>
-</div>
 </footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
-
