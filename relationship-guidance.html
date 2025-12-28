@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Healthy Relationship Guidelines | Love & Relationship Advice</title>
+
+  <meta name="description" content="Discover healthy relationship guidelines with easy-to-understand advice on communication, trust, respect, emotional bonding, and long-lasting love." />
+  <meta name="keywords" content="relationship guidelines, healthy relationship tips, love advice, couples communication, trust in relationships" />
+  <meta name="author" content="Love And Relationship Website" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Healthy Relationship Guidelines" />
+  <meta property="og:description" content="Very detailed and easy-to-understand relationship guidelines to build trust, love, and emotional connection." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #ffffff;
+      line-height: 1.8;
+    }
+
+    /* ================= NAVBAR ================= */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 15, 25, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 14px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #eaeaea;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff5c8a;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      padding: 80px 8% 60px;
+      text-align: center;
+      background: radial-gradient(circle at top, #1a1a2e, #0b0b0f 70%);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #ff5c8a;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      color: #cfcfe6;
+    }
+
+    /* ================= SECTIONS ================= */
+    section {
+      padding: 60px 8%;
+    }
+
+    .section-title {
+      font-size: 30px;
+      color: #000000;
+      margin-bottom: 18px;
+    }
+
+    .section-desc {
+      max-width: 1000px;
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    /* ================= GRID & CARDS ================= */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: #131324;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      color: #ff7298;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .card a {
+      color: #ff5c8a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ================= LONG CONTENT ================= */
+    .content-block {
+      max-width: 1100px;
+      margin-bottom: 40px;
+    }
+
+    .content-block h4 {
+      font-size: 22px;
+      color: #014668;
+      margin-bottom: 10px;
+    }
+
+    .content-block p {
+      color: #000000;
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    /* ================= TIPS ================= */
+    .tips {
+      background: linear-gradient(135deg, #1a1a2e, #131324);
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .tips ul {
+      margin-left: 20px;
+    }
+
+    .tips li {
+      margin-bottom: 10px;
+      color: #eaeaea;
+    }
+
+    /* ================= FAQ ================= */
+    .faq {
+      max-width: 1000px;
+    }
+
+    .faq h4 {
+      color: #014668;
+      margin-bottom: 8px;
+    }
+
+    .faq p {
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    /* ================= CAROUSEL ================= */
+    .carousel-wrapper {
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 24px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .carousel-track .card {
+      min-width: 300px;
+      scroll-snap-align: start;
+    }
+
+    .carousel-wrapper::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .carousel-wrapper::-webkit-scrollbar-thumb {
+      background: #ff5c8a;
+      border-radius: 10px;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #0b0b0f;
+      border-top: 1px solid #1f1f2e;
+      padding: 30px 8%;
+      text-align: center;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav>
+  <div class="logo">LoveTools</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="relation-advice.html">Advice</a></li>
+    <li><a href="more.html">More</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <h1>Healthy Relationship Guidelines</h1>
+  <p>
+    Building a strong relationship is not about perfection — it is about understanding, trust, communication, and emotional connection. These relationship guidelines are designed to be easy to understand, deeply practical, and emotionally meaningful for couples at every stage of love.
+  </p>
+</div>
+
+<!-- ================= CORE PRINCIPLES ================= -->
+<section>
+  <h2 class="section-title">Core Principles of a Healthy Relationship</h2>
+  <p class="section-desc">
+    Every successful relationship stands on a few timeless principles that create emotional safety and trust. When these foundations are strong, love grows naturally, conflicts reduce, and emotional bonding becomes deeper.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Open & Honest Communication</h3>
+      <p>
+        Communication is the heartbeat of any relationship. Express your feelings clearly, listen without interrupting, and never assume what your partner thinks. Honest conversations build emotional safety and reduce misunderstandings.</p>
+    </div>
+    <div class="card">
+      <h3>Trust & Transparency</h3>
+      <p>Trust is built when words and actions align. Be transparent about your intentions, friendships, and emotions. Trust grows slowly but breaks quickly, so handle it with care.</p>
+    </div>
+    <div class="card">
+      <h3>Mutual Respect</h3>
+      <p>Respect protects love even during disagreements. Respect means valuing your partner’s opinions, boundaries, and individuality. Even during disagreements, respect keeps love from turning into hurt.</p>
+    </div>
+    <div class="card">
+      <h3>Emotional Support</h3>
+      <p>Being emotionally available strengthens intimacy. A healthy relationship provides comfort during stress, failures, and doubts. Being emotionally available strengthens intimacy and long-term bonding.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed Guidelines -->
+  <section>
+    <h2 class="section-title">Detailed Relationship Guidelines</h2>
+
+    <div class="content-block">
+      <h4>1. Understand Before Reacting</h4>
+      <p>
+        Many conflicts arise not because of problems, but because of rushed reactions. Take time to understand your partner’s emotions and perspective before responding. Emotional intelligence is a key pillar of healthy love.
+      </p>
+    </div>
+
+    <div class="content-block">
+      <h4>2. Set Clear Boundaries</h4>
+      <p>
+        Boundaries are not walls; they are guidelines for respect. Discuss personal space, privacy, communication limits, and emotional needs openly. Healthy boundaries protect love from resentment.
+      </p>
+    </div>
+
+    <div class="content-block">
+      <h4>3. Resolve Conflicts Calmly</h4>
+      <p>
+        Disagreements are natural, but how you resolve them defines the relationship. Avoid shouting, blaming, or silent treatment. Focus on solutions rather than winning arguments.
+      </p>
+    </div>
+
+    <div class="content-block">
+      <h4>4. Grow Together, Not Apart</h4>
+      <p>
+        Encourage each other’s personal growth, career goals, and dreams. A supportive partner celebrates growth instead of feeling threatened by it.
+      </p>
+    </div>
+  </section>
+
+  <!-- Practical Tips -->
+  <section>
+    <h2 class="section-title">Practical Relationship Tips for Daily Life</h2>
+    <div class="tips">
+      <ul>
+        <li>Express appreciation regularly, even for small efforts.</li>
+        <li>Spend quality time without distractions like phones.</li>
+        <li>Apologize sincerely when you are wrong.</li>
+        <li>Never compare your relationship with others.</li>
+        <li>Keep emotional and physical intimacy alive.</li>
+        <li>Communicate expectations clearly instead of assuming.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2 class="section-title">Frequently Asked Relationship Questions</h2>
+    <div class="faq">
+      <h4>What makes a relationship healthy?</h4>
+      <p>
+        A healthy relationship is built on trust, communication, respect, emotional support, and shared values. Both partners feel safe, valued, and understood.
+      </p>
+
+      <h4>How do I improve communication with my partner?</h4>
+      <p>
+        Practice active listening, express feelings honestly, avoid assumptions, and choose the right time to talk. Calm communication strengthens emotional bonding.
+      </p>
+
+      <h4>Is conflict normal in relationships?</h4>
+      <p>
+        Yes, conflict is normal. What matters is resolving it with empathy, patience, and mutual respect rather than anger or avoidance.
+      </p>
+    </div>
+  </section>
+
+<!-- ================= VIDEO CAROUSEL ================= -->
+<section>
+  <h2 class="section-title">Motivational Relationship & Love Guidance Videos</h2>
+
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+
+      <div class="card">
+        <h3>Trust, Loyalty & Emotional Safety</h3>
+        <p>Trust creates emotional peace and deeper bonding.</p>
+        <p><strong>Recommended for:</strong> Couples facing trust issues.</p>
+        <a href="https://youtu.be/hEfCxEdDtGU?si=VAHXzCKdVCaEb0v4" target="_blank">Watch on YouTube →</a>
+      </div>
+
+      <div class="card">
+        <h3>Relationship Advice That Actually Works</h3>
+        <p>Practical solutions for real-life relationship challenges.</p>
+        <p><strong>Recommended for:</strong> Couples seeking long-term growth.</p>
+        <a href="https://youtu.be/s9wXFKeUJzo?si=75KpGX8jertmM35S" target="_blank">Watch on YouTube →</a>
+      </div>
+
+      <div class="card">
+        <h3>Healthy Communication</h3>
+        <p>Learn to express feelings clearly and listen empathetically.</p>
+        <p><strong>Recommended for:</strong> Couples with frequent conflicts.</p>
+        <a href="https://youtu.be/xpkjFkhK6tg?si=d7RrzJNBciloT8i6" target="_blank">Watch on YouTube →</a>
+      </div>
+
+      <div class="card">
+        <h3>Healing Emotional Pain</h3>
+        <p>Overcome emotional wounds and rebuild self-worth.</p>
+        <p><strong>Recommended for:</strong> Healing after breakups.</p>
+        <a href="https://youtu.be/EmTlVJFYfLs?si=3f_4eRbcSOn4ocRc" target="_blank">Watch on YouTube →</a>
+      </div>
+
+      <div class="card">
+        <h3>Building Long-Term Love</h3>
+        <p>Grow together through patience, commitment, and understanding.</p>
+        <p><strong>Recommended for:</strong> Serious couples.</p>
+        <a href="https://youtu.be/dZS8_4ppNgQ?si=CC4g9-Eiu7Yhfoou" target="_blank">Watch on YouTube →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO SCHEMA ================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    { "@type": "VideoObject", "name": "Trust & Emotional Safety", "url": "https://youtu.be/PRZJsujHiV0" },
+    { "@type": "VideoObject", "name": "Relationship Advice", "url": "https://youtu.be/gU09UbisLHA" },
+    { "@type": "VideoObject", "name": "Healthy Communication", "url": "https://youtu.be/Yy1rH4aFZtQ" },
+    { "@type": "VideoObject", "name": "Healing Emotional Pain", "url": "https://www.youtube.com/watch?v=6w8Kf8P6v4M" },
+    { "@type": "VideoObject", "name": "Long-Term Love", "url": "https://www.youtube.com/watch?v=JH6C6ZQ8nQ0" }
+  ]
+}
+</script>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2025 LoveTools. All rights reserved.</p>
+  <p>Guiding hearts toward healthier, deeper, and more meaningful relationships.</p>
+</footer>
+
+</body>
+</html>
