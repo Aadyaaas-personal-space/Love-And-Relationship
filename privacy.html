@@ -1,48 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Love & Relationship</title>
-    <link rel="stylesheet" href="style.css"> <!-- your main CSS -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | LoveTools</title>
 
+<style>
+:root{
+    --primary:#ff4d6d;
+    --bg:#0b0b0b;
+    --panel:#121212;
+    --text:#f1f1f1;
+    --muted:#b5b5b5;
+    --border:#1f1f1f;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    line-height:2;
+}
+
+/* TOP NAV */
+.top-nav{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    padding:18px 30px;
+    border-bottom:1px solid var(--border);
+    background:#0e0e0e;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.brand{
+    font-size:1.4rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.top-nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:.95rem;
+}
+
+.top-nav a:hover{
+    color:var(--text);
+}
+
+/* LAYOUT */
+.layout{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    max-width:1600px;
+    margin:auto;
+}
+
+/* SIDE NAV */
+.side-nav{
+    position:sticky;
+    top:80px;
+    height:calc(100vh - 80px);
+    padding:30px 20px;
+    border-right:1px solid var(--border);
+    background:#0c0c0c;
+    overflow-y:auto;
+}
+
+.side-nav h3{
+    font-size:.85rem;
+    color:#888;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.side-nav a{
+    display:block;
+    padding:10px 12px;
+    margin-bottom:6px;
+    border-radius:6px;
+    text-decoration:none;
+    color:var(--muted);
+    font-size:.95rem;
+}
+
+.side-nav a:hover{
+    background:#1a1a1a;
+    color:var(--text);
+}
+
+/* MAIN CONTENT */
+.content{
+    padding:60px 80px;
+}
+
+section{
+    margin-bottom:100px;
+}
+
+section h2{
+    font-size:2rem;
+    margin-bottom:20px;
+    color:var(--primary);
+}
+
+section p{
+    font-size:1.05rem;
+    color:var(--muted);
+    margin-bottom:20px;
+}
+
+/* SMOOTH SCROLL */
+html{
+    scroll-behavior:smooth;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .layout{
+        grid-template-columns:1fr;
+    }
+    .side-nav{
+        display:none;
+    }
+    .content{
+        padding:40px 25px;
+    }
+}
+</style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4434935718162454"
      crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Privacy Policy</h1>
-    </header>
 
-    <main>
-        <section>
-            <p>Your privacy is important to us. This website does not collect personal information unless you voluntarily provide it (e.g., through a contact form).</p>
-        </section>
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="brand">LoveTools</div>
+    <a href="#overview">Overview</a>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#privacy">Terms & Services</a>
+    <a href="#faq">FAQ</a>
+</nav>
 
-        <section>
-            <h2>Data Collection</h2>
-            <p>We may use third-party services like Google Analytics to track website usage, but no personally identifiable information is collected without your consent.</p>
-        </section>
+<div class="layout">
 
-        <section>
-            <h2>Cookies</h2>
-            <p>Cookies may be used to improve user experience, but they do not contain personal data.</p>
-        </section>
+<!-- SIDE NAV -->
+<aside class="side-nav">
+    <h3>Policy Modules</h3>
+    <a href="#overview">Overview</a>
+    <a href="#data-collection">Information We Collect</a>
+    <a href="#data-usage">How We Use Data</a>
+    <a href="#cookies">Cookies & Tracking</a>
+    <a href="#ads">Advertising & AdSense</a>
+    <a href="#sharing">Information Sharing</a>
+    <a href="#security">Data Security</a>
+    <a href="#children">Children’s Privacy</a>
+    <a href="#rights">User Rights</a>
+    <a href="#updates">Policy Updates</a>
+</aside>
 
-        <section>
-            <h2>Third-Party Services</h2>
-            <p>Affiliate links or ads may be present. We do not share your personal information with third parties.</p>
-        </section>
+<!-- MAIN CONTENT -->
+<main class="content">
 
-        <section>
-            <h2>Changes</h2>
-            <p>We may update this policy from time to time. Please check this page periodically.</p>
-        </section>
-    </main>
+<!-- OVERVIEW -->
+<section id="overview">
+<h2>Overview</h2>
+<p>
+LoveTools is committed to respecting and protecting the privacy of every user who interacts with our platform. This document explains, in a transparent and comprehensive manner, how information is collected, processed, stored, and safeguarded when you use our website.
+</p>
+<p>
+We designed this Privacy Policy to be clear, detailed, and aligned with global privacy expectations, including Google advertising and content policies. Our goal is to empower users with knowledge and control over their data.
+</p>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Love & Relationship. All rights reserved.</p>
-    </footer>
+<!-- DATA COLLECTION -->
+<section id="data-collection">
+<h2>Information We Collect</h2>
+<p>
+We collect information to ensure reliable service delivery, improve user experience, and maintain website integrity. Information may be collected directly from users or automatically through technical systems.
+</p>
+<p>
+Directly provided information includes data submitted through forms, feedback tools, or voluntary communication. Automatically collected data includes device type, browser version, IP address, access times, referring URLs, and page interaction metrics.
+</p>
+<p>
+This information is aggregated and analyzed to understand usage patterns, diagnose technical issues, and improve platform performance.
+</p>
+</section>
+
+<!-- DATA USAGE -->
+<section id="data-usage">
+<h2>How We Use Your Information</h2>
+<p>
+Collected information is used strictly for legitimate operational purposes. This includes maintaining functionality, optimizing content relevance, enhancing security, monitoring performance, and ensuring compliance with legal requirements.
+</p>
+<p>
+We do not misuse data, nor do we engage in practices that compromise user trust. All processing activities are purpose-limited and proportional.
+</p>
+</section>
+
+<!-- COOKIES -->
+<section id="cookies">
+<h2>Cookies & Tracking Technologies</h2>
+<p>
+Cookies are small data files stored on your device that allow websites to remember preferences and session data. LoveTools uses cookies to enhance navigation, measure traffic, and improve usability.
+</p>
+<p>
+Users can control cookie preferences through browser settings. Disabling cookies may affect some interactive features but core access remains available.
+</p>
+</section>
+
+<!-- ADS -->
+<section id="ads">
+<h2>Advertising & Google AdSense</h2>
+<p>
+LoveTools participates in advertising programs such as Google AdSense. Advertising partners may use cookies, web beacons, or similar technologies to display ads relevant to user interests.
+</p>
+<p>
+Google may use the DoubleClick cookie to serve ads based on previous visits. Users can manage ad personalization through Google Ads Settings.
+</p>
+</section>
+
+<!-- SHARING -->
+<section id="sharing">
+<h2>Information Sharing & Disclosure</h2>
+<p>
+We do not sell or rent personal information. Data may be shared only when required by law, to protect platform integrity, or with trusted service providers operating under confidentiality obligations.
+</p>
+</section>
+
+<!-- SECURITY -->
+<section id="security">
+<h2>Data Security Measures</h2>
+<p>
+We employ administrative, technical, and organizational safeguards to protect information from unauthorized access, alteration, or disclosure. While no system is perfectly secure, we continuously improve our protection practices.
+</p>
+</section>
+
+<!-- CHILDREN -->
+<section id="children">
+<h2>Children’s Privacy</h2>
+<p>
+LoveTools does not knowingly collect personal data from children under the age of 13. If such data is identified, it will be promptly removed.
+</p>
+</section>
+
+<!-- RIGHTS -->
+<section id="rights">
+<h2>User Rights & Choices</h2>
+<p>
+Users have the right to understand how data is used and to make informed choices regarding cookies, advertising personalization, and continued use of the platform.
+</p>
+</section>
+
+<!-- UPDATES -->
+<section id="updates">
+<h2>Policy Updates</h2>
+<p>
+This Privacy Policy may be updated periodically to reflect changes in technology, legal requirements, or operational practices. Continued use of LoveTools signifies acceptance of the updated terms.
+</p>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+<p>
+This section addresses common questions regarding privacy, data usage, and user controls. For additional clarification, users are encouraged to contact us through official channels.
+</p>
+</section>
+
+</main>
+</div>
+
 </body>
 </html>
-
