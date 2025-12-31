@@ -1,44 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - Love & Relationship</title>
-    <link rel="stylesheet" href="style.css"> <!-- your main CSS -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions | LoveTools</title>
+
+<style>
+:root{
+    --bg:#ffffff;
+    --panel:#f7f7f7;
+    --text:#1f1f1f;
+    --muted:#555;
+    --border:#e5e5e5;
+    --accent:#2a2a2a;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    line-height:2;
+}
+
+/* TOP NAV */
+.top-nav{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    padding:18px 30px;
+    border-bottom:1px solid var(--border);
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.brand{
+    font-size:1.4rem;
+    font-weight:700;
+}
+
+.brand a{
+    color:var(--text);
+    text-decoration:none;
+}
+
+.top-nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:.95rem;
+}
+
+.top-nav a:hover{
+    color:var(--text);
+}
+
+/* LAYOUT */
+.layout{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    max-width:1600px;
+    margin:auto;
+}
+
+/* SIDE NAV */
+.side-nav{
+    position:sticky;
+    top:80px;
+    height:calc(100vh - 80px);
+    padding:30px 20px;
+    border-right:1px solid var(--border);
+    background:#fafafa;
+    overflow-y:auto;
+}
+
+.side-nav h3{
+    font-size:.85rem;
+    color:#777;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.side-nav a{
+    display:block;
+    padding:10px 12px;
+    margin-bottom:6px;
+    border-radius:6px;
+    text-decoration:none;
+    color:var(--muted);
+    font-size:.95rem;
+}
+
+.side-nav a:hover{
+    background:#ececec;
+    color:var(--text);
+}
+
+/* MAIN CONTENT */
+.content{
+    padding:60px 80px;
+}
+
+section{
+    margin-bottom:100px;
+}
+
+section h2{
+    font-size:2rem;
+    margin-bottom:20px;
+    color:var(--accent);
+}
+
+section p{
+    font-size:1.05rem;
+    color:var(--muted);
+    margin-bottom:20px;
+}
+
+/* SMOOTH SCROLL */
+html{
+    scroll-behavior:smooth;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .layout{
+        grid-template-columns:1fr;
+    }
+    .side-nav{
+        display:none;
+    }
+    .content{
+        padding:40px 25px;
+    }
+}
+</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4434935718162454"
+     crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Terms & Conditions</h1>
-    </header>
 
-    <main>
-        <section>
-            <p>By using this website, you agree to the following terms and conditions. Please read carefully.</p>
-        </section>
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="brand">
+        <a href="index.html">LoveTools</a>
+    </div>
+    <a href="#overview">Overview</a>
+    <a href="#terms">Terms & Conditions</a>
+    <a href="#usage">Acceptable Use</a>
+    <a href="#faq">FAQ</a>
+</nav>
 
-        <section>
-            <h2>Use of Website</h2>
-            <p>All content is for entertainment purposes only. Messages, advice, and love meter results are not professional or legal guidance.</p>
-        </section>
+<div class="layout">
 
-        <section>
-            <h2>Intellectual Property</h2>
-            <p>All text, images, and design elements on this site are property of Love & Relationship and may not be used without permission.</p>
-        </section>
+<!-- SIDE NAV -->
+<aside class="side-nav">
+    <h3>Terms Modules</h3>
+    <a href="#overview">Overview</a>
+    <a href="#acceptance">Acceptance of Terms</a>
+    <a href="#eligibility">Eligibility</a>
+    <a href="#usage">Acceptable Use</a>
+    <a href="#intellectual">Intellectual Property</a>
+    <a href="#limitations">Limitations of Liability</a>
+    <a href="#termination">Termination</a>
+    <a href="#modifications">Modifications</a>
+    <a href="#governing">Governing Law</a>
+</aside>
 
-        <section>
-            <h2>Limitation of Liability</h2>
-            <p>We are not responsible for any actions or decisions based on the content of this site. Use at your own discretion.</p>
-        </section>
+<!-- MAIN CONTENT -->
+<main class="content">
 
-        <section>
-            <h2>Changes</h2>
-            <p>We may update these terms at any time without notice. Continued use of the website implies acceptance of the changes.</p>
-        </section>
-    </main>
+<section id="overview">
+<h2>Overview</h2>
+<p>
+Welcome to LoveTools. These Terms and Conditions govern your access to and use of our website, tools, features, and content. By accessing or using LoveTools, you agree to be legally bound by these terms.
+</p>
+<p>
+These terms exist to clearly define the rights, responsibilities, and expectations between LoveTools and its users, ensuring a safe, transparent, and lawful environment.
+</p>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Love & Relationship. All rights reserved.</p>
-    </footer>
+<section id="acceptance">
+<h2>Acceptance of Terms</h2>
+<p>
+By accessing this website, you confirm that you have read, understood, and agreed to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must discontinue use of the website immediately.
+</p>
+<p>
+Continued use of LoveTools constitutes ongoing acceptance of any updates or modifications to these terms.
+</p>
+</section>
+
+<section id="eligibility">
+<h2>User Eligibility</h2>
+<p>
+You must be at least 13 years of age to use LoveTools. By using this website, you represent and warrant that you meet this eligibility requirement and have the legal capacity to enter into this agreement.
+</p>
+<p>
+If you are accessing the website on behalf of an organization, you confirm that you have authority to bind that organization to these terms.
+</p>
+</section>
+
+<section id="usage">
+<h2>Acceptable Use Policy</h2>
+<p>
+Users agree to use LoveTools only for lawful purposes and in a manner that does not infringe upon the rights of others or restrict their use of the platform.
+</p>
+<p>
+Prohibited activities include, but are not limited to: misuse of tools, unauthorized access attempts, distribution of harmful code, abusive behavior, or any activity that violates applicable laws or regulations.
+</p>
+</section>
+
+<section id="intellectual">
+<h2>Intellectual Property Rights</h2>
+<p>
+All content, design elements, logos, text, graphics, and tools on LoveTools are the intellectual property of LoveTools unless otherwise stated. Unauthorized reproduction, distribution, or modification is strictly prohibited.
+</p>
+<p>
+Limited permission is granted to access and use content for personal, non-commercial purposes only.
+</p>
+</section>
+
+<section id="limitations">
+<h2>Limitation of Liability</h2>
+<p>
+LoveTools is provided on an “as is” and “as available” basis. We make no warranties regarding accuracy, reliability, or availability of the website.
+</p>
+<p>
+Under no circumstances shall LoveTools be liable for any direct, indirect, incidental, or consequential damages arising from use or inability to use the website.
+</p>
+</section>
+
+<section id="termination">
+<h2>Termination of Access</h2>
+<p>
+We reserve the right to suspend or terminate access to LoveTools at our sole discretion, without prior notice, if a user violates these terms or engages in harmful behavior.
+</p>
+</section>
+
+<section id="modifications">
+<h2>Modifications to Terms</h2>
+<p>
+LoveTools reserves the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting on this page.
+</p>
+<p>
+It is the user’s responsibility to review this page periodically for updates.
+</p>
+</section>
+
+<section id="governing">
+<h2>Governing Law</h2>
+<p>
+These Terms and Conditions shall be governed by and interpreted in accordance with applicable laws. Any disputes arising from use of LoveTools shall be subject to the appropriate legal jurisdiction.
+</p>
+</section>
+
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+<p>
+This section addresses common questions regarding the use of LoveTools, user responsibilities, and legal limitations. For further clarification, users are encouraged to reach out through official contact channels.
+</p>
+</section>
+
+</main>
+</div>
+
 </body>
 </html>
